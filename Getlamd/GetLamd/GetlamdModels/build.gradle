@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('getlamd-common-1.0-20190219.140843-67.jar'))

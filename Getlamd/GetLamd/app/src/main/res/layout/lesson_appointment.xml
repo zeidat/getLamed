@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lessonLayoutStudentText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="No Student Selected"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lessonLayoutStudentButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessonLayoutVehicleText">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/lessonLayoutDetails"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Lesson Details"
+            android:text=" " />
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/lessonLayoutStudentButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_students" />
+
+    <ImageButton
+        android:id="@+id/lessonLayoutVehicleButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessonLayoutStudentButton"
+        app:srcCompat="@drawable/ic_car" />
+
+    <TextView
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:id="@+id/lessonLayoutVehicleText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="No Vehicle Selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lessonLayoutVehicleButton"
+        app:layout_constraintTop_toBottomOf="@+id/lessonLayoutStudentText" />
+
+    <Button
+        android:id="@+id/lessonLayoutDelete"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="70dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_add"
+        android:scaleType="fitCenter"
+        android:text="Save This Lesson"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <View
+        android:background="@color/lightGrey"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessonLayoutDelete">
+
+    </View>
+
+
+</android.support.constraint.ConstraintLayout>
+

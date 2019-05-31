@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //greenDao
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+    implementation'org.greenrobot:greendao-generator:3.2.0'
+
+}
+
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

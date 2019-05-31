@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_cornars"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/rounded_cornars">
+
+        <TextView
+            android:id="@+id/customAppointmentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:text="TextView"
+            android:textSize="25dp" />
+
+        <ImageButton
+            android:id="@+id/customShowDetails"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_delete" />
+
+        <ImageButton
+            android:id="@+id/customDelete"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="153dp"
+            android:layout_marginRight="83dp"
+            android:layout_toRightOf="@id/customAppointmentTitle"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_expand_button" />
+
+        <TextView
+            android:id="@+id/customTime"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_below="@id/customAppointmentTitle"
+            android:layout_height="wrap_content"
+            android:text="Time For Appointment" />
+    </RelativeLayout>
+
+
+</LinearLayout>
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddNewVehicleFragment">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/addVMake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="make"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/AddVModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Model"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/addVColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="color"/>
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

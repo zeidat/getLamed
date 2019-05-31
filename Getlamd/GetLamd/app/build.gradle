@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt' // if using Kotlin
+apply plugin: 'io.objectbox' // apply last
+
+
+android {
+    compileSdkVersion 28
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.zeidat.getlamd"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ['objectbox.daoCompat': 'true']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+
+dependencies {
+    kapt 'com.android.databinding:compiler:3.0.0-alpha5'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    //kotlin
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //Custom Button
+    implementation 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+    implementation project(':Service')
+    //dagger
+    implementation 'com.google.dagger:dagger:2.10'
+    kapt 'com.google.dagger:dagger-compiler:2.10'
+    kapt 'com.google.dagger:dagger-android-processor:2.16'
+
+    //RXAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    //getlamd
+    implementation 'com.getlamd:getlamd-common:4.0-SNAPSHOT'
+    //Custom calender
+    implementation 'com.github.jhonnyx2012:horizontal-picker:1.0.6'
+    //custom imageView
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //floating action button
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+
+
+    //RecyclerView
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    //lifeCycle
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+
+
+
+    implementation project(':DAL')
+}

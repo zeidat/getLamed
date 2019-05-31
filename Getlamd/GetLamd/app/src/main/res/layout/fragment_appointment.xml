@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/lightGrey"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.AppointmentFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/AppointmentFragmentTabLayout"
+            android:layout_width="match_parent"
+            app:tabIndicatorColor="@color/colorPrimary"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/appointmentTapToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"/>
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/appointmentTapWeek"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:layout_height="wrap_content"
+                android:text="Week"/>
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/appointmentTapMonth"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:text="Month"/>
+
+
+        </android.support.design.widget.TabLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+            android:id="@+id/appointmentDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <!--<DatePicker-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:id="@+id/appointmentDatePicker"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:headerBackground="@color/colorPrimary"-->
+            <!--android:layout_height="wrap_content">-->
+
+
+        <!--</DatePicker>-->
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/appointmentListOf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/custom_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="33dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/HomeCellDate"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="63dp"
+        android:text="3:00 - 4:00"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="33dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/HomeCellDate"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</android.support.constraint.ConstraintLayout>

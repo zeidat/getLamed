@@ -1,0 +1,33 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt' // <- Add this line
+
+//apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //retrofit
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //RXAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    //jackson Converter
+    implementation 'com.squareup.retrofit2:converter-jackson:2.5.0'
+    //Converter
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4'
+
+    //getlamd
+    implementation 'com.getlamd:getlamd-common:5.0-SNAPSHOT'
+
+    //Joda time
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.8'
+
+
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
